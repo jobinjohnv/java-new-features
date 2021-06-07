@@ -10,8 +10,9 @@ public class OptionalExample {
 		Optional<String> empty = Optional.of("Hello");
 		System.out.println(empty.orElse("Place Holder"));
 		System.out.println(empty.isPresent());
-		System.out.println(empty.filter(x -> x.startsWith("H")));
+		System.out.println(empty.filter(x -> x.startsWith("H")).get());
 
 	}
 
+	
 }

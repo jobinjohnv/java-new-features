@@ -23,21 +23,21 @@ public class OptionalTests {
 
 	}
 	
-	@Test
-	public void basicOptionalFeatures() {
-		Optional<String> empty = Optional.empty();
-		Assertions.assertFalse(empty.isPresent());
-		Assertions.assertTrue(empty.isEmpty());
-	}
-
-	@Test
-	public void optionalWithObjects(){
-		User user = new User("Hello",2);
-		Optional<User> userObj = Optional.ofNullable(user);
-		List<User> namesWithOptional = userObj.stream().filter(x-> x.name.equals("Hello")).collect(Collectors.toList());
-		// Stream is not possible if Object is not defined as a Optional Object
-		namesWithOptional.forEach(x-> System.out.println(x.name));
-	}
+//	@Test
+//	public void basicOptionalFeatures() {
+//		Optional<String> empty = Optional.empty();
+//		Assertions.assertFalse(empty.isPresent());
+//		Assertions.assertTrue(empty.empty());
+//	}
+//
+//	@Test
+//	public void optionalWithObjects(){
+//		User user = new User("Hello",2);
+//		Optional<User> userObj = Optional.ofNullable(user);
+//		List<User> namesWithOptional = userObj.stream().filter(x-> x.name.equals("Hello")).collect(Collectors.toList());
+//		// Stream is not possible if Object is not defined as a Optional Object
+//		namesWithOptional.forEach(x-> System.out.println(x.name));
+//	}
 
 	@Test
 	@DisplayName("Verify that a String is empty or not")
